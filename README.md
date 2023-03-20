@@ -14,18 +14,19 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `yarn run build`
+## Keycloak
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### `docker-compose up -d`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Will start Keycloak and a Postgres DB to store information.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### `docker-compose down`
 
-## Learn More
+To shutdown the containers.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Setup
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Once running, go to http://localhost:8085/ then create a new realm named `myrealm`.
+- Create a client named `myclient` and set the URL's to `http://localhost:3000`
+- Create a role named `user`.
+- Create a user named `user` and assign it the `user` role and set the password to `user`
