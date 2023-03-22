@@ -1,18 +1,6 @@
-# Getting Started with Create React App
+# React Keycloak Example
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `yarn start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+This project only uses `Keycloak-js` to connect to Keycloak.
 
 ## Keycloak
 
@@ -30,3 +18,17 @@ To shutdown the containers.
 - Create a client named `myclient` and set the URL's to `http://localhost:3000`
 - Create a role named `user`.
 - Create a user named `user` and assign it the `user` role and set the password to `user`
+
+## Available Scripts
+
+In the project directory, you can run:
+
+### `yarn start`
+
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
+
+
