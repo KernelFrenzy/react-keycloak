@@ -1,10 +1,10 @@
 import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
-import UserService from "../../services/UserService";
+import KeycloakService from "../../services/KeycloakService";
 import {Button} from "react-bootstrap";
-import RenderOnAnonymous from "../utilities/RenderOnAnonymous";
-import RenderOnAuthenticated from "../utilities/RenderOnAuthenticated";
+import RenderWhenAnonymous from "../utilities/RenderWhenAnonymous";
+import RenderWhenAuthenticated from "../utilities/RenderWhenAuthenticated";
 
 function Header() {
     return (
@@ -17,12 +17,12 @@ function Header() {
                         <Nav.Link href="/about">About</Nav.Link>
                     </Nav>
                     <Nav>
-                        <RenderOnAnonymous>
-                            <Button onClick={() => UserService.doLogin()}>Login</Button>
-                        </RenderOnAnonymous>
-                        <RenderOnAuthenticated>
-                            <Button onClick={() => UserService.doLogout()}>Logout</Button>
-                        </RenderOnAuthenticated>
+                        <RenderWhenAnonymous>
+                            <Button onClick={() => KeycloakService.doLogin()}>Login</Button>
+                        </RenderWhenAnonymous>
+                        <RenderWhenAuthenticated>
+                            <Button onClick={() => KeycloakService.doLogout()}>Logout</Button>
+                        </RenderWhenAuthenticated>
                     </Nav>
                 </Navbar.Collapse>
             </Container>

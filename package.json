@@ -2,6 +2,13 @@
   "name": "react-keycloak",
   "version": "0.1.0",
   "private": true,
+  "description": "A working example of React with Keycloak-JS",
+  "bugs": {
+    "url": "https://www.github.com/ferreiramark91/react-keycloak/issues"
+  },
+  "author": {
+    "name" : "Mark Ferreira"
+  },
   "dependencies": {
     "bootstrap": "^5.2.3",
     "keycloak-js": "^21.0.1",
