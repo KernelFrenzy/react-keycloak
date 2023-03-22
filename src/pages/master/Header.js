@@ -1,6 +1,10 @@
 import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
+import UserService from "../../services/UserService";
+import {Button} from "react-bootstrap";
+import RenderOnAnonymous from "../utilities/RenderOnAnonymous";
+import RenderOnAuthenticated from "../utilities/RenderOnAuthenticated";
 
 function Header() {
     return (
@@ -13,7 +17,12 @@ function Header() {
                         <Nav.Link href="/about">About</Nav.Link>
                     </Nav>
                     <Nav>
-                        <Nav.Link href="/">Login</Nav.Link>
+                        <RenderOnAnonymous>
+                            <Button onClick={() => UserService.doLogin()}>Login</Button>
+                        </RenderOnAnonymous>
+                        <RenderOnAuthenticated>
+                            <Button onClick={() => UserService.doLogout()}>Logout</Button>
+                        </RenderOnAuthenticated>
                     </Nav>
                 </Navbar.Collapse>
             </Container>
